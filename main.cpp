@@ -38,6 +38,13 @@ void myInit (void)
         gluOrtho2D(0.0, 902.0, 0.0, 684.0);
 }
 
+void initGL() {
+	// Set "clearing" or background color
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Black and opaque
+}
+
+
+
 void print( float x, float y, char *st)
 {
     int l,i;
@@ -1516,11 +1523,12 @@ void CarTranslate(int value)
     }
 
     glutTimerFunc(0,CarTranslate,25);
+
 }
 
 void keyboard(unsigned char key, int x, int y)
 {
-    if(key=='b')
+    if(key=='s')
     {
         CarTranslate(0);
         glutPostRedisplay();
@@ -1529,7 +1537,7 @@ void keyboard(unsigned char key, int x, int y)
     {
         exit(1);
     }
-    /*if(key=='r')
+    if(key=='r')
     {
         if(r==0)
         {
@@ -1538,7 +1546,7 @@ void keyboard(unsigned char key, int x, int y)
         {
             r=0;
         }
-    }*/
+    }
     if(key=='n')
     {
         if(dnr==103 && dng==155 && dnb==176)
