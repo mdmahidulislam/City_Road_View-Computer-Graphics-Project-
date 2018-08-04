@@ -317,6 +317,15 @@ void Hospital()
         HospitalStripe1+=20;
         HospitalWindow1(HospitalStripe1,349);
     }
+    /*glPushMatrix();
+    glColor3ub(0,0,0);
+    glBegin(GL_QUADS);
+    glVertex2i(x,y);
+    glVertex2i(x+16,y);
+    glVertex2i(x+16,y+30);
+    glVertex2i(x,y+30);
+    glEnd();
+    glPopMatrix();*/
 
     int HospitalStripe2=163;
     for(int i=11;i>=0;i--)
